@@ -3,8 +3,8 @@
 A live interactive sand simulation built using p5.js. Users can drag the mouse to create sand particles that fall and interact with their environment. The simulation includes customizable grid size and color options.
 
 ## Live Demo
-
-[View the live demo here](https://lucifer-prashant.github.io/FallingSand/)
+You can use it by goint this link:
+[FallingSandSim](https://lucifer-prashant.github.io/FallingSand/)
 
 ## Features
 
