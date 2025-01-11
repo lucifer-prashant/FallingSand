@@ -1,6 +1,7 @@
 # Falling Sand Simulation
 
-A live interactive sand simulation built using p5.js. Users can drag the mouse to create sand particles that fall and interact with their environment. The simulation includes customizable grid size and color options.You can use it by goint this link:
+A live interactive sand simulation built using p5.js. Users can drag the mouse to create sand particles that fall and interact with their environment. The simulation includes customizable grid size and color options. 
+You can use it by goin to this link: 
 [FallingSandSim](https://lucifer-prashant.github.io/FallingSand/)
 
 ## Features
