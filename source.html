@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>p5.js Sand Simulation</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+		<script src="sketch.js" defer></script>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-family: Arial, sans-serif;
+				background: #1a1a1a;
+				color: white;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			h1 {
+				margin-top: 20px;
+				font-size: 2.5rem;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+				background: linear-gradient(45deg, #ffd700, #ffa500);
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+				padding: 10px 20px;
+				border-bottom: 2px solid #ffa500;
+				animation: shimmer 2s infinite linear;
+			}
+
+			@keyframes shimmer {
+				0% {
+					background-position: 0% 50%;
+				}
+				100% {
+					background-position: 200% 50%;
+				}
+			}
+
+			canvas {
+				border: 2px solid #fff;
+				box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+			}
+			.controls {
+				position: fixed;
+				left: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+			}
+			.slider-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: 20px 0;
+			}
+			.controls input {
+				transform: rotate(270deg);
+				margin: 50px 0;
+				width: 150px;
+			}
+			.controls label {
+				margin-top: 30px;
+				transform: rotate(0deg);
+				text-align: center;
+			}
+			.controls button {
+				margin: 5px;
+				padding: 10px 20px;
+				font-size: 16px;
+				background-color: #4caf50;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				box-shadow: 0 4px #3e8e41;
+				transition:
+					background-color 0.3s,
+					box-shadow 0.3s;
+			}
+			.controls button:hover {
+				background-color: #45a049;
+			}
+			.controls button:active {
+				box-shadow: 0 2px #3e8e41;
+				transform: translateY(2px);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Falling Sand Simulation</h1>
+		<div class="controls">
+			<div class="slider-container">
+				<input id="hue" type="range" min="0" max="360" step="1" value="200" />
+				<label for="hue">Hue</label>
+			</div>
+			<div class="slider-container">
+				<input
+					id="gridSize"
+					type="range"
+					min="5"
+					max="20"
+					step="1"
+					value="10" />
+				<label for="gridSize">Grid Size</label>
+			</div>
+			<button id="reset">Reset</button>
+		</div>
+	</body>
+</html>
